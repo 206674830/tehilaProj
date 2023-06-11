@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Meetup.API",
+    "\\Meetup.API\\Controllers",
+    "\\Meetup.BL\\Interfaces",
+    "\\Meetup.BL\\Services",
+    "\\Meetup.DAL",
+    "\\Meetup.DAL\\Interfaces",
+    "\\Meetup.DAL\\Services",
+    "\\Meetup.Entities"
+  ],
+  "SelectedNode": "\\Meetup.API\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}

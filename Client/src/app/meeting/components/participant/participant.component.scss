@@ -1,0 +1,21 @@
+.participant{
+    width: 672px;
+    height: 92px;
+    padding: 10px;
+    margin: 17px;
+    box-shadow: 0px 2px 7px #00000014;
+    border-radius: 8px;
+    font-size:26px;
+    color:#0C3058;
+    background-color: #FFFFFF;
+    position:relative;
+    .name{
+        font-size:26px;
+    }
+    .email{
+        font-size:16px;
+    }
+    .mobile{
+        font-size:16px;
+    }
+}

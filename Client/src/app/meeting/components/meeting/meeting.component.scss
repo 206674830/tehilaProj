@@ -1,0 +1,81 @@
+.meeting{
+    width: 343px;
+    height: 244px;
+    padding: 20px;
+    margin: 17px;
+    box-shadow: 0px 2px 7px #00000014;
+    border-radius: 8px;
+    font-size:16px;
+    position:relative;
+    .pi{
+        font-size: 16px;
+    /* padding-left: 2px; */
+    margin-left: 9px;
+   
+    }
+    .date{
+        float:right;
+        width:100%;
+    }
+    .name{ 
+        float:right;
+        width:100%;
+        font-size:24px;
+    }
+    .city{ 
+        float:right;
+        width:100%;
+    }
+    .participant{
+        width: calc(100% - 30px);
+        bottom: 16px;
+        left: 30px;
+        position: absolute;
+        .images{
+            float: right;
+            width: 157px;
+            position: relative;
+            height: 55px;
+            /* border: 1px solid black; */
+            margin-right: 12px;
+        }
+        div[class^="pImage"]{
+            border-radius: 4px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: -14px;
+            
+        }
+        .pImage1{
+           background-image: url("../../../../assets/images/p1.png");
+           right: 40px;
+           z-index: 3000;
+        }
+        .pImage2{
+            background-image: url("../../../../assets/images/p2.png");
+            right: 20px;
+            z-index: 1000;
+        }
+        .pImage3{
+            background-image: url("../../../../assets/images/p3.png");
+            right:0px;
+        }
+        .pNumber{
+            right: 90px;
+            position: absolute;
+            bottom: 0px;
+        }
+        .link{
+          float:left;
+          margin-top: 31px;
+          color:#0d6efd;
+          .pi{
+            font-size: 12px;
+            vertical-align: middle;
+            margin-right: 6px;
+            margin-left: 0px;
+          }
+        }
+    }
+}

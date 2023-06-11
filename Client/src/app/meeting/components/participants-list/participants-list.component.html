@@ -1,0 +1,14 @@
+<div class="logo_part">
+</div>
+
+<div class="details_part">
+    <div class="link"><a [routerLink]="['']">בית</a> > {{meeting?.name}}</div>
+    <div class="name"> {{meeting?.name}}</div>
+    <div class="participant_title">רשימת המשתתפים</div>
+</div>
+  
+<div class="participant_list">
+<ng-container *ngFor="let p of meeting?.participants">
+    <app-participant [participant]="p"></app-participant>
+</ng-container>
+</div>

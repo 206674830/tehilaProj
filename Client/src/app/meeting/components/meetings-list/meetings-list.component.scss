@@ -1,0 +1,54 @@
+.meeting_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: right;
+    width: 100%;
+    padding: 10px 97px;
+    justify-content: center;
+    background-color:#F5F8FA;
+}
+
+.img_part{
+ width: 100%;
+ float: right;
+ background-image: url("../../../../assets/images/mainBgImage.png");
+ background-repeat: no-repeat;
+ height: 40%;
+ background-position: left -11px bottom -32px;
+    .title1{
+       font: normal normal normal 2.7em Rubik;
+    }
+    .title2{
+        font: normal normal bold 2.7em Rubik;
+    }
+}
+
+.search_part{
+    width: 100%;
+    height: 103px;
+    float:right;
+    padding: 32px;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content:center;
+    background: #0068F5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 16px #00000029;
+    .field{
+        width: 220px;
+        float: right;
+        input{
+            border-radius: 4px;
+            width: 200px;
+            height: 40px;
+        }
+  
+    }
+}
+
+.details_part{
+    direction: ltr;
+    padding-left: 30px;
+    padding-top: 30px;
+}

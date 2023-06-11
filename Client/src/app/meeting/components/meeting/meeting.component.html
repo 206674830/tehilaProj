@@ -1,0 +1,19 @@
+<div class="meeting">
+    <div class="date"><i class="pi pi-calendar"></i>{{meeting.date | date:'dd.MM.yyyy'}}</div>
+    <div class="name">{{meeting.name}}</div>
+    <div class="city"><i class="pi pi-map-marker"></i>{{meeting.city?.name}}</div>
+    <div class="participant">
+        <div class="images">
+            <ng-container *ngFor="let p of meeting.participants  | slice:0:3;let index=index">
+                <div  class="pImage{{index+1}}">
+
+                </div>
+                <div class="pNumber" *ngIf="index == 2">3+</div>
+            </ng-container>
+            
+        </div>
+        <div class="link"> <a [routerLink]="[meeting.id, 'participants']">לכל הנרשמים</a>
+            <i class="pi pi-arrow-left"></i>
+        </div>
+    </div>
+</div>

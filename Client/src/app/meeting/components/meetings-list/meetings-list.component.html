@@ -1,0 +1,43 @@
+<div class="img_part">
+    <div class="details_part">
+        <span style="color:red" *ngIf="freeSearch.length == 100">
+            חיפוש עד 100 תווים
+       </span>
+        <div class="p-inputgroup">
+            <input type="text" pInputText [(ngModel)]="freeSearch" placeholder="חיפוש חופשי" maxlength="100"> 
+            <button type="button" pButton pRipple label="חפש" (click)="search()"></button>        
+        </div>
+    </div>
+
+    <div class="title1">גלו את כל האירועים</div>
+    <div class="title2">הקרובים אליכם</div>
+</div>
+<div class="search_part">
+    <ng-container class="flex_container">
+        <div class="field">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText [(ngModel)]="searchName" placeholder="שם ארוע">
+            </span>
+        </div>
+        <div class="field">
+            <p-dropdown [options]="cities" [(ngModel)]="searchCity" optionLabel="name" optionValue="id"
+                placeholder="בחירת עיר"></p-dropdown>
+    
+        </div>
+        <div class="field">
+            <p-calendar [(ngModel)]="searchDate" dateFormat="dd.mm.yy" placeholder="בחירת תאריך" [showIcon]="true">
+            </p-calendar>
+    
+        </div>
+    </ng-container>
+  
+
+</div>
+
+<div class="meeting_list ">
+    <ng-container
+        *ngFor="let meet of meetings | filter: 'name': searchName | filter: 'cityId': searchCity | filter: 'date': searchDate">
+        <app-meeting [meeting]="meet"></app-meeting>
+    </ng-container>
+</div>
