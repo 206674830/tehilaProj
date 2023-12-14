@@ -49,3 +49,38 @@ namespace Meetup.API.Controllers
 
     }
 }
+  int MinDigitsToDelete(int[] numbers)
+ {
+     Dictionary<int, int> countMap = new Dictionary<int, int>();
+
+     foreach (var digit in numbers)
+     {
+         if (countMap.ContainsKey(digit))
+         {
+             countMap[digit]++;
+         }
+         else
+         {
+             countMap[digit] = 1;
+         }
+     }
+
+     HashSet<int> uniqueCounts = new HashSet<int>();
+
+     int minDigitsToDelete = 0;
+
+     foreach (var countInMap in countMap.Values)
+     {
+         var cnt = countInMap;
+
+         while (uniqueCounts.Contains(cnt) && cnt > 0)
+         {
+             minDigitsToDelete++;
+             cnt--;
+         }
+
+         uniqueCounts.Add(cnt);
+     }
+
+     return minDigitsToDelete;
+ }
